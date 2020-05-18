@@ -1,0 +1,22 @@
+<div class="container eight column">
+<div>
+    <div class="ui grid" *ngIf="shoppinglist">
+        <div class=" wide column">
+            <div style="background-color:lightgray; padding: 10px;">
+            <h1 class="ui header">{{ shoppinglist.title }}</h1>
+            <h3 class="ui header">Fällig bis: {{ shoppinglist.dueDate }}</h3>
+                <h3 class="ui header">Zusätzliche Informationen:</h3>
+                <p>{{ shoppinglist.feedback }}</p>
+        </div>
+            <div class="ui divider"></div>
+            <bs-shopping-item></bs-shopping-item>
+        </div>
+
+
+
+    </div>
+    <button (click)="showShoppinglist()" class="ui red button">
+    Zurück zur Übersicht
+</button>
+</div>
+</div>

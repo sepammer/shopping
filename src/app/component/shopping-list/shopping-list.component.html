@@ -1,0 +1,7 @@
+
+<div class="ui middle aligned selection divided list">
+    <a *ngFor="let shoppinglist of shoppinglists" class="item"
+       (click)="showDetails(shoppinglist)"><b>{{shoppinglist.title}}</b> <button *ngIf="isType()=='1'"class="ui button" style="margin-left:30px; float:right "(click)="deleteList(shoppinglist)">Liste Löschen</button></a>
+
+</div>
+

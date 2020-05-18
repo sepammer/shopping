@@ -1,0 +1,10 @@
+<div class="ui middle aligned selection divided list" *ngFor="let item of items">
+    <a *ngIf="item.list_id == $saveID" class="item bs-book-list-item"
+       (click)="showItemByList(item) ">
+        <b style="font-size:20pt;">{{item.title}}</b> <span style="position:absolute; left:30%;"> Preis: {{item.price}}</span><span style="position:absolute; left:43%;"> Anzahl: {{item.quantity}}</span><span style="position:absolute; left:56%;;"> Maximaler Preis: {{item.maxPrice}}</span><button style="margin-left:30px;float:right"(click)="deleteItem(item.id)" class="ui button">
+        Item Löschen
+    </button></a>
+
+</div>
+
+

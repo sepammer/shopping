@@ -1,0 +1,29 @@
+<div *ngIf="!isLoggedIn()">
+
+<div class="home">
+
+    <h1>Hallo zur Covid-19 Shopping-Hilfe</h1>
+    <br/>
+    <h2>Bitte loggen Sie sich ein um den vollen Umfang des Systems zu erleben!</h2>
+
+
+
+
+
+</div>
+
+</div>
+
+<div *ngIf="isLoggedIn()">
+
+    <h1 *ngIf="isType()=='0'">Hallo Lenny Leonard!</h1>
+    <h1 *ngIf="isType()=='1'">Hallo Carl Carlson!</h1>
+    <div *ngIf="isType()=='1'"><p>Sie sind eingeloggt als Hilfesuchender!</p></div>
+    <div *ngIf="isType()=='0'"><p>Sie sind eingeloggt als Helfender!</p></div>
+    <h1>Alle Listen in einer Übersicht:</h1>
+    <div>
+        <bs-shopping-list *ngIf="listOn" (showDetailsEvent)="showDetail($event)"></bs-shopping-list>
+        <bs-shopping-list-detail *ngIf="detailOn" [shoppinglist]="shoppinglist" (showListEvent)="showList()"></bs-shopping-list-detail>
+
+    </div >
+</div>

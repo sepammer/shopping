@@ -1,0 +1,24 @@
+<h1>Bitte wählen Sie eine Liste aus:</h1>
+<bs-shopping-list></bs-shopping-list>
+<h1>Item hinzufügen</h1>
+<form class="ui large form" [formGroup]="itemForm" (ngSubmit)="submitForm()">
+    <input type="hidden" name="id">
+    <div class="field">
+    <label>Artikel</label>
+    <input formControlName="title" placeholder="Bitte Artikel eingeben!">
+    </div>
+    <div class="field">
+        <label>Anzahl</label>
+        <input formControlName="quantity">
+    </div>
+
+    <div class="field">
+        <label>Preis</label>
+        <input formControlName="price" >
+    </div>
+    <div class="field">
+        <label>Maximaler Preis</label>
+        <input formControlName="maxPrice">
+    </div>
+
+    <button type="submit" class="ui button" [disabled]="itemForm.invalid">Speichern</button> </form>
